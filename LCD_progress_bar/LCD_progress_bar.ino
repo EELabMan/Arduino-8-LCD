@@ -73,7 +73,7 @@ void setup()
   //Set up the LCDs number of columns and rows: 
   lcd.begin(16, 2);
   // Print a message to the LCD.
-  lcd.print("Jeremy's Display");
+  lcd.print("Loading");
  
   //Make progress characters
   lcd.createChar(0, p20);

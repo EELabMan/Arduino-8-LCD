@@ -13,7 +13,8 @@ the Free Software Foundation.
 
 //Include Wire I2C library and set the address
 #include <Wire.h>
-#define TEMP_ADDR 72
+int TEMP_ADDR = 0b1001010; //Use 0b before a binary number This is for the TC74 A2 address
+// If your TC74 has a different code, you need to change the TEMP_ADDR to the right binary address.
 
 //Include the LCD library and initialize:
 #include <LiquidCrystal.h>
@@ -166,7 +167,7 @@ void loop()
     lcd.setCursor(15,1);
     lcd.write(2);
   }
-  //It't not to hot!
+  //It's not to hot!
   else
   {
     //Make sure the speaker is off, reset the “one beep” variable
